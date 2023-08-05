@@ -1,0 +1,121 @@
+@import './mixins';
+
+.search{
+  width: 27rem;
+  margin-top: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+
+  @include mobile{
+    width: fit-content;
+    gap: 10px;
+  }
+
+
+  &__input{
+    display: flex;
+    gap: 10px;
+    @include mobile{
+      gap: 0;
+    }
+  }
+  input{
+    background-color: rgba(74, 74, 93, 0.57);
+    width: 20rem;
+
+    
+    height: 40px;
+    font-size: 20px;
+    border: 2px solid rgba(255, 255, 255, 1);
+    box-shadow: 0 0 5px 0 white;
+    padding: 0;
+    padding-left: 15px;
+    
+    margin: 0;
+    color: white;
+    border-radius: 20px;
+  
+    transition: all .2s ease-in;
+    @include tablet{
+      height: 60px;
+    }
+    @include mobile{
+      margin: 0;
+      width: fit-content;
+      font-size: 15px;
+      padding-left: 10px;
+      
+      border-radius: 0;
+    }
+
+
+    &:focus{
+      border: 2px solid rgb(138, 255, 138);
+      box-shadow: 0 0 10px 0 rgb(138, 255, 138);
+    }
+    &::placeholder{
+      color: white;
+    }
+    
+  }
+  button{
+    width: 80px;
+    height: 42px;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    background-color: rgba(74, 74, 93, 0.57);
+    box-shadow: 0 0 5px 0 white;
+    border: 2px solid rgb(255, 255, 255);
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+  
+    transition: all .3s ease-in;
+    @include tablet{
+      height: 64px;
+      width: 100px;
+    }
+    @include mobile{
+      border-radius: 0px;
+      
+      
+
+      width: 3rem;
+      font-size: 12px;
+      height: 44px;
+    }
+
+    &:hover{
+      transform: translateY(-3px);
+    }
+  }
+
+}
+
+.dropdown-menu{
+  width: 400px;
+  height: auto;
+  border: 2px solid rgb(138, 255, 138);
+  box-shadow: 0 0 10px 0 rgb(138, 255, 138);
+  
+  border-radius: 10px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+
+  @include mobile{
+    width: 13rem;
+  }
+  ul{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    li{
+      width: fit-content;
+      margin: 7px;
+      cursor: pointer;
+      color: white;
+    }
+  }
+}

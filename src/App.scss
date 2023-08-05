@@ -1,3 +1,11 @@
+@import './components/styles/currentWeather.scss';
+@import './components/styles/forecast.scss';
+@import './components/styles/header.scss';
+@import './components/styles/spinner.scss';
+@import './components/styles/search.scss';
+
+@import './components/styles/mixins';
+
 #root{
   width: 100%;
   height: 100%;
@@ -7,13 +15,12 @@
 
 .content{
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-
+  @include flexCenter(column);
   gap: 50px;
 }
+
+
+
 
 /* .error{
   border: 2px solid red;

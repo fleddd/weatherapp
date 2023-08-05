@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import './styles/search.css'
+import './styles/search.scss'
 
 import { useEffect, useState } from 'react'
 import { useQuery } from 'react-query'

@@ -1,4 +1,4 @@
-import './styles/currentWeather.css'
+import './styles/currentWeather.scss'
 import PropTypes from 'prop-types'
 const CurrentWeather = ({name, temp, feelsLike, icon, condition, wind_kph, humidity, cloud}) => {
   

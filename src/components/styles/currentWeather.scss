@@ -1,0 +1,78 @@
+@import './mixins';
+
+.currentWeather{
+  width: 35rem;
+  min-height: 250px;
+  
+
+  background-color: rgba(74, 74, 93, 0.57);
+  box-shadow: 0 0 12px 0 white;
+  margin: 10px;
+  padding: 30px 45px;
+
+
+  border-radius: 30px;
+  border: 2px solid white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 3em;
+  
+  color:  white;
+  @include mobile{
+    width: 9rem;
+    gap: 20px;
+  }
+  &-title{
+    display: grid;
+    align-items: center;
+    grid-template-columns: 80% 20%;
+
+    img{
+      width: 70px;
+    }
+  }
+  &__name{
+    font-size: 30px;
+    
+    
+  }
+  &-desc{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 200px));
+    place-items: center;
+    grid-row-gap: 30px;
+    
+    @include mobile{
+      @include flexCenter(column);
+      gap: 8px;
+    }
+  
+  }
+  &__item{
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+}
+
+.title{
+  font-size: 20px;
+  color: rgb(153, 153, 255);
+}
+
+
+.error{
+  color: red;
+}
+.item-value{
+  max-width: 10rem;
+  flex-basis: 40px;
+  flex-shrink: 1;
+  text-align: center; 
+}

@@ -1,0 +1,104 @@
+.forecast{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+
+  margin: 100px;
+
+  color: white;
+
+
+
+  background-color: rgba(74, 74, 93, 0.57);
+  box-shadow: 0 0 12px 0 white;
+  padding: 30px 45px;
+  border-radius: 30px;
+  border: 2px solid white;
+  @include tablet{
+    padding: 30px 25px;
+    background-color: transparent;
+    box-shadow: none;
+    padding: none;
+    border-radius: 0;
+    border: none;
+  }
+  @include mobile{
+    background-color: transparent;
+    box-shadow: none;
+    padding: none;
+    border-radius: 0;
+    border: none;
+
+    
+  }
+  &__title{
+    h3{
+      font-size: 50px;
+      @include mobile{
+        font-size: 1.5rem;
+      }
+    }
+    
+   }
+   &__days{
+    display: flex;
+    gap: 50px;
+    @include tablet{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include mobile{
+      display: block;
+    }
+  }
+  &__day{
+    display: flex;
+    flex-direction: column;
+  
+    justify-content: center;
+    gap: 2rem;
+    @include tablet{
+      width: 12rem;
+      border: 2px solid white;
+      background-color: rgba(74, 74, 93, 0.57);
+      box-shadow: 0 0 12px 0 white;
+      margin: 20px;
+      padding: 20px 0;
+    }
+    @include mobile{
+      width: 12rem;
+      border: 2px solid white;
+      background-color: rgba(74, 74, 93, 0.57);
+      box-shadow: 0 0 12px 0 white;
+      margin: 20px;
+      padding: 20px 0;
+    }
+    .forecast__title{
+      font-size: 20px;
+      color: rgb(153, 153, 255);
+    }
+  }
+  &__icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }  
+  &__info{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  
+    gap: 0.5rem;
+    @include tablet{
+     font-size: 1rem;
+    }
+  }
+  &__condition{
+    color: powderblue;
+    text-align: center;
+  }
+}

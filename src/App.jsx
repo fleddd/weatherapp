@@ -1,5 +1,5 @@
 import { useQuery } from 'react-query'
-import './App.css'
+import './App.scss'
 
 
 import LoadingSpinner from './components/LoadingSpinner'
