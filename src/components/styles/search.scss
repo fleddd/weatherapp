@@ -25,7 +25,7 @@
     width: 20rem;
 
     
-    height: 40px;
+    height: 43px;
     font-size: 20px;
     border: 2px solid rgba(255, 255, 255, 1);
     box-shadow: 0 0 5px 0 white;
@@ -61,7 +61,7 @@
   }
   button{
     width: 100px;
-    height: 42px;
+    height: 45px;
     font-size: 18px;
     outline: none;
     border: none;
@@ -98,14 +98,13 @@
 }
 
 .dropdown-menu{
-  width: 400px;
-  height: auto;
+  margin-top: 5px;
+  width: 20.9rem;
+  min-height: 44px;
   border: 2px solid rgb(138, 255, 138);
   box-shadow: 0 0 10px 0 rgb(138, 255, 138);
   
-  border-radius: 10px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-radius: 20px;
 
   @include mobile{
     width: 13rem;
