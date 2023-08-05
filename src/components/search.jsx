@@ -11,7 +11,7 @@ const Search = ({handleOnChangeSearch}) => {
   const [dropDown, setDropDown] = useState(false)
 
   const fetchData = (search) => {
-    return axios.get(`http://api.weatherapi.com/v1/search.json?key=aca93c5e40b6486fb8d125118232207&q=${search}`).then(data =>{return data.data})
+    return axios.get(`https://api.weatherapi.com/v1/search.json?key=aca93c5e40b6486fb8d125118232207&q=${search}`).then(data =>{return data.data})
   }
   const handleOnClick = (value) => {
     setSearch(value)

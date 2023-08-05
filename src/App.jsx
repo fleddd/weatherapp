@@ -14,7 +14,7 @@ function App() {
   const [weatherSearch, setWeatherSearch] = useState('')
 
   const fetchForecastData = (searchTerm) => {
-    return axios.get(`http://api.weatherapi.com/v1/forecast.json?key=aca93c5e40b6486fb8d125118232207&q=${searchTerm}&days=7&aqi=no&alerts=no&lang=uk`).then(data =>{
+    return axios.get(`https://api.weatherapi.com/v1/forecast.json?key=aca93c5e40b6486fb8d125118232207&q=${searchTerm}&days=7&aqi=no&alerts=no&lang=uk`).then(data =>{
       return data.data
     })
   }
