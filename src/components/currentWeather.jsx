@@ -18,15 +18,15 @@ const CurrentWeather = ({name, temp, feelsLike, icon, condition, wind_kph, humid
       </div>
       <div className="currentWeather-desc">
             <div className="currentWeather__item">
-              <span className='title'>Temperature:</span>
+              <span className='title'>Температура:</span>
               <span className='item-value'>{temp}°</span>
             </div>
             <div className="currentWeather__item">
-              <span className='title'>Condition:</span>
+              <span className='title'>Стан:</span>
               <span className='item-value'>{condition}</span>
             </div>
             <div className="currentWeather__item">
-            <span className='title'>Feels like:</span>
+            <span className='title'>Відчувається:</span>
             <span className='item-value'>{feelsLike}°</span>
             </div>
             <div className="currentWeather__item">

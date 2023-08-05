@@ -38,16 +38,16 @@ const Search = ({handleOnChangeSearch}) => {
   return (
     <div className="search">
       <div className='search__input'>
-          <input type="text" value={search} onChange={(e) => {
+          <input type="text" value={search} maxLength={15} onChange={(e) => {
             if(e.target.value != ' ') setSearch(e.target.value)
             e.target.value ? setDropDown(true) : setDropDown(false)
-          }} placeholder="Type name of a city ..."/>
+          }} placeholder="Напиши назву міста..."/>
 
-          {isLoading ? <button disabled className='loading' style={{background: "rgb(255, 248, 171", color: 'black'}}>Loading...</button> : <button onClick={() => {
+          {isLoading ? <button disabled className='loading' style={{background: "rgb(255, 248, 171", color: 'black'}}>Загрузка...</button> : <button onClick={() => {
             handleOnChangeSearch(search)
             setDropDown(false)
             setSearch('')
-          }}>Search</button>}
+          }}>Пошук</button>}
           
       </div>
        
@@ -55,7 +55,7 @@ const Search = ({handleOnChangeSearch}) => {
 
         {data, dropDown && <div className="dropdown-menu">
           <ul>
-            {!data?.length && <li className='error'>Wrong city...</li> }
+            {!data?.length && <li className='error'>Неправильний ввід...</li> }
             {data?.map(item => {
               return <li onClick={() => {
                 handleOnClick(item.name)

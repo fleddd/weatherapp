@@ -44,6 +44,8 @@
    }
    &__days{
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 50px;
     @include tablet{
       display: grid;
@@ -100,5 +102,6 @@
   &__condition{
     color: powderblue;
     text-align: center;
+    font-size: 0.9rem;
   }
 }
